@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+    <!--引入插件css-->
+    <link rel="stylesheet" th:href="@{/public/lib/layui/css/layui.css}">
+    <!--引入静态资源文件-->
+    <link rel="stylesheet" th:href="@{/student/list.css}">
+    <!--引入jquery第三方库-->
+    <script th:src="@{/public/lib/jquery/jquery-3.7.1.min.js}"></script>
+    <!--引入插件js-->
+    <script th:src="@{/public/lib/layui/layui.js}"></script>
+    <!--引入自己写的js-->
+    <script th:src="@{/student/list.js}"></script>
+</head>
+<body>
+<!--搜索区-->
+<div class="search">
+    <form action="">
+        <div>
+            <label for="id">编号:</label>
+            <input id="id" type="text" autocomplete="off" placeholder="请输入学生编号">
+        </div>
+        <div>
+            <label for="studentId">学号:</label>
+            <input id="studentId" type="text" autocomplete="off" placeholder="请输入学生学号">
+        </div>
+        <div>
+            <label for="college">学院:</label>
+            <input id="college" type="text" autocomplete="off" placeholder="请输入学生学院">
+        </div>
+        <div>
+            <label for="name">姓名:</label>
+            <input id="name" type="text" autocomplete="off" placeholder="请输入学生姓名">
+        </div>
+
+        <div>
+            <label for="sex">性别:</label>
+            <select id="sex">
+                <option value="">不限</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+
+        <div>
+            <button id="search-btn" type="button">查询</button>
+            <button type="reset">重置</button>
+        </div>
+    </form>
+</div>
+
+<!--按钮区-->
+<div class="action">
+    <div>
+        <button type="button" id="add-btn">新增</button>
+    </div>
+    <div>
+        <button type="button" id="edit-btn">修改</button>
+    </div>
+    <div>
+        <button type="button" id="query-btn">查询</button>
+    </div>
+    <div>
+        <button type="button" id="del-btn">删除</button>
+    </div>
+</div>
+
+<!--数据显示区-->
+<div class="data">
+    <table id="tbl">
+        <thead>
+        <tr>
+            <th><input type="checkbox" id="check-all"></th>
+            <th>主键</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>学院</th>
+            <th>专业</th>
+            <th style="width: 80px">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--显示学生数据-->
+        </tbody>
+    </table>
+</div>
+
+<!--分页条-->
+<div class="paginate">
+    <ul>
+        <li class="first fixed"><a href="javascript:void(0)">首页</a></li>
+        <li class="prev fixed"><a href="javascript:void(0)">上一页</a></li>
+        <!--由js添加-->
+        <li class="next fixed"><a href="javascript:void(0)">下一页</a></li>
+        <li class="last fixed"><a href="javascript:void(0)">尾页</a></li>
+    </ul>
+</div>
+</body>
+</html>

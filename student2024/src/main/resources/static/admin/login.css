@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("welcome1.jpg");
+    background-color: #eee;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 550px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-logo {
+    height: 120px;
+    background: url("login-logo.jpg") no-repeat center center/cover;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.login-logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.login form {
+    margin: 8px 20px;
+}
+
+.login form > div {
+    margin-bottom: 6px;
+}
+
+.login form input {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 6px;
+    width: 290px;
+}
+
+#captcha {
+    width: 160px;
+}
+
+.login form > div > label:first-child {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+#login-btn {
+    outline: none;
+    background-color: #1e9fff;
+    border-color: transparent;
+    padding: 10px 50px;
+    color: #fff;
+}

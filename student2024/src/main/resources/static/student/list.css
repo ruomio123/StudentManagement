@@ -1,0 +1,179 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.data {
+    overflow: scroll;
+    border: 1px solid #ccc;
+}
+
+#tbl {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tbl tr > td, #tbl tr > th {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+}
+
+#tbl tr > th {
+    border-top: none;
+}
+
+#tbl tr > td:first-child, #tbl tr > th:first-child {
+    border-left: none;
+}
+
+#tbl tr > td:first-child {
+    text-align: center;
+}
+
+#tbl tr > td:first-child > input, #tbl tr > th:first-child > input {
+    width: 18px;
+    height: 18px;
+}
+
+#tbl > tbody > tr:nth-of-type(even) {
+    background-color: #f7f7f7;
+}
+
+#tbl > tbody > tr:hover {
+    background-color: #16b777;
+}
+
+#tbl tr > td:last-child {
+    text-align: center;
+}
+
+#tbl tr > td:last-child button {
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #1e9fff;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+#tbl tr > td:last-child button.del {
+    background-color: #ff5722;
+}
+
+#tbl tr > td:last-child button:not(:last-child) {
+    margin-right: 3px;
+}
+
+/*按钮区*/
+.action {
+    margin-bottom: 10px;
+}
+
+.action > div {
+    float: left;
+    margin-right: 10px;
+}
+
+.action::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+}
+
+.action > div > button {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 6px 15px;
+}
+
+.action #del-btn {
+    background-color: #ff5722;
+    border-color: transparent;
+    color: #fff;
+}
+
+/*分页*/
+.paginate {
+    margin-top: 10px;
+}
+
+.paginate > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paginate > ul > li {
+    float: left;
+}
+
+.paginate > ul > li.active {
+    background-color: #16b777;
+    border-color: transparent;
+}
+
+.paginate > ul > li.active > a {
+    color: #fff;
+}
+
+.paginate > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+    width: 0;
+}
+
+.paginate > ul > li {
+    background-color: #eee;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.paginate > ul > li > a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+}
+
+/*搜索区*/
+.search {
+    margin-bottom: 10px;
+}
+
+.search > form > div {
+    float: left;
+    margin-right: 15px;
+}
+
+.search > form::after {
+    content: "";
+    clear: both;
+    display: block;
+    width: 0;
+}
+
+.search > form > div > input, .search > form > div > select {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 8px 0 8px 5px;
+    width: 200px;
+}
+
+.search button {
+    outline: none;
+    background-color: #eee;
+    padding: 7px 15px;
+    border: 1px solid #ccc;
+}
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.situ.student2024.dao.UserDAO">
+    <!--根据用户名查询一个唯一用户-->
+    <select id="findByUsername" resultType="User">
+        select id, username, password
+        from t_security_user
+        where username = #{username}
+    </select>
+</mapper>

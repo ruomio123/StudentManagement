@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增员工</title>
+    <!--引入插件css-->
+    <link rel="stylesheet" th:href="@{/public/lib/layui/css/layui.css}">
+    <!--引入静态资源文件-->
+    <link rel="stylesheet" th:href="@{/student/add.css}">
+    <!--引入jquery第三方库-->
+    <script th:src="@{/public/lib/jquery/jquery-3.7.1.min.js}"></script>
+    <!--引入插件js-->
+    <script th:src="@{/public/lib/layui/layui.js}"></script>
+    <!--引入自己写的js-->
+    <script th:src="@{/student/add.js}"></script>
+</head>
+<body>
+<div>
+    <form id="stu-form" action="">
+        <div>
+            <label for="name">姓名(<span style="color: red">*</span>)：</label>
+            <input type="text" id="name" autocomplete="off" placeholder="请输入学生姓名">
+        </div>
+        <div>
+            <label for="studentId">学号：</label>
+            <input type="text" id="studentId" autocomplete="off" placeholder="请输入学号">
+        </div>
+        <div>
+            <label for="male">性别：</label>
+            <input type="radio" name="sex" id="male" checked value="男"><label for="male">男</label>
+            &nbsp; &nbsp;
+            <input type="radio" name="sex" id="female" value="女"><label for="female">女</label>
+        </div>
+        <div>
+            <label for="college">学院：</label>
+            <input type="text" id="college" autocomplete="off" placeholder="请输入学院">
+        </div>
+
+        <div>
+            <label for="major">专业：</label>
+            <input id="major" autocomplete="off" placeholder="请输入专业">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

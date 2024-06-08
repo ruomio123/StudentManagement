@@ -1,0 +1,35 @@
+body {
+    margin: 8px;
+}
+
+input[type=text], textarea {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 5px;
+    width: 300px;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+textarea {
+    height: 100px;
+}
+
+#stu-form > div {
+    margin-bottom: 10px;
+}
+
+#stu-form > div > * {
+    /*垂直居中*/
+    vertical-align: middle;
+}
+
+#stu-form > div > label:first-child {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}

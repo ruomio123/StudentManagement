@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统-登录</title>
+    <!--引入插件css-->
+    <link rel="stylesheet" th:href="@{/public/lib/layui/css/layui.css}">
+    <!--引入静态资源文件-->
+    <link rel="stylesheet" th:href="@{/admin/login.css}">
+    <!--引入jquery第三方库-->
+    <script th:src="@{/public/lib/jquery/jquery-3.7.1.min.js}"></script>
+    <!--引入插件js-->
+    <script th:src="@{/public/lib/layui/layui.js}"></script>
+    <!--引入自己写的js-->
+    <script th:src="@{/admin/login.js}"></script>
+</head>
+<body>
+<div class="login">
+    <div class="login-logo"></div>
+    <div>
+        <form action="">
+            <div>
+                <label for="username">账号：</label>
+                <input type="text" id="username" placeholder="请输入账号">
+            </div>
+            <div>
+                <label for="password">密码：</label>
+                <input type="password" id="password"  placeholder="请输入密码">
+            </div>
+            <div>
+                <label for="captcha">验证码：</label>
+                <input type="text" id="captcha" autocomplete="off"
+                       placeholder="请输入验证码">
+                <!--显示验证码-->
+                <img class="captcha" src="/admin/captcha" style="width: 130px;height: 48px">
+            </div>
+            <div>
+                <label></label>
+                <button id="login-btn" type="button">登录</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

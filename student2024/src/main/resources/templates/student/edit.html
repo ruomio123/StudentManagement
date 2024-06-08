@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改员工</title>
+    <!--引入插件css-->
+    <link rel="stylesheet" th:href="@{/public/lib/layui/css/layui.css}">
+    <!--引入静态资源文件-->
+    <link rel="stylesheet" th:href="@{/student/edit.css}">
+    <!--引入jquery第三方库-->
+    <script th:src="@{/public/lib/jquery/jquery-3.7.1.min.js}"></script>
+    <!--引入插件js-->
+    <script th:src="@{/public/lib/layui/layui.js}"></script>
+
+    <script th:inline="javascript">
+        const error = /*[[${error}]]*/"";
+        const stu = /*[[${stu}]]*/{};
+    </script>
+
+    <!--引入自己写的js-->
+    <script th:src="@{/student/edit.js}"></script>
+</head>
+<body>
+<div>
+    <form id="stu-form" action="">
+        <div>
+            <label for="name">姓名(<span style="color: red">*</span>)：</label>
+            <input type="text" id="name" autocomplete="off"
+                   placeholder="请输入姓名" th:value="${stu?.name}">
+        </div>
+        <div>
+            <label for="studentId">学号(<span style="color: red">*</span>)：</label>
+            <input type="text" id="studentId" autocomplete="off"
+                   placeholder="请输入学号" th:value="${stu?.studentId}">
+        </div>
+        <div>
+            <label for="male">性别：</label>
+            <input type="radio" name="sex" id="male" checked value="男"><label for="male">男</label>
+            &nbsp; &nbsp;
+            <input type="radio" name="sex" id="female" value="女"><label for="female">女</label>
+        </div>
+
+        <div>
+            <label for="college">学院：</label>
+            <input type="text" id="college" autocomplete="off"
+                   placeholder="请输入学院" th:value="${stu?.college}">
+        </div>
+        <div>
+            <label for="major">专业：</label>
+            <input type="text" id="major" autocomplete="off"
+                   placeholder="请输入专业" th:value="${stu?.major}">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

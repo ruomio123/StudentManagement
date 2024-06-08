@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>山东农业大学综合教务系统-首页</title>
+    <!--引入插件css-->
+    <link rel="stylesheet" th:href="@{/public/lib/layui/css/layui.css}">
+    <!--引入静态资源文件-->
+    <link rel="stylesheet" th:href="@{/admin/admin.css}">
+    <!--引入jquery第三方库-->
+    <script th:src="@{/public/lib/jquery/jquery-3.7.1.min.js}"></script>
+    <!--引入插件js-->
+    <script th:src="@{/public/lib/layui/layui.js}"></script>
+    <!--引入自己写的js-->
+    <script th:src="@{/admin/admin.js}"></script>
+</head>
+<body>
+<!--头部-->
+<header>
+    <div class="welcome-word">
+        尊敬的用户<i th:text="${user?.username}"></i>您好，欢迎登录使用本系统。
+        点此<a id="logout-btn" href="#">注销</a>。
+    </div>
+</header>
+<!--主体部分-->
+<div class="body">
+    <!--左侧功能导航-->
+    <aside>
+        <ul class="nav">
+            <li><a href="/student/list" id="1">学生信息管理</a></li>
+
+        </ul>
+    </aside>
+    <!--右侧主体显示部分-->
+    <div class="main">
+        <!--选项卡面板-->
+        <div class="layui-tab" lay-filter="tabs" lay-allowclose="true">
+            <!--选项卡标题-->
+            <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="0">欢迎页</li>
+            </ul>
+            <!--选项卡内容-->
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <iframe src="/admin/welcome"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--脚部-->
+<footer>
+    <div>&copy;&nbsp;版本所有 山东农业大学 &nbsp;联系方式：sdau@sdau.com</div>
+</footer>
+</body>
+</html>
